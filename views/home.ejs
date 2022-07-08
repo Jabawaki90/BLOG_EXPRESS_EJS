@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+<h1>Home</h1>
+<p><%= home %></p>
+<% latestPosts.forEach((e)=>{ %>
+
+<%  const newBody=e.body.substring(0,100)+ ' ...'              %>
+        <h1><%= e.title %></h1>
+        <p><%= newBody %>
+        <a href="/post/<%= e.title %>">Read More</a>
+</p>
+<%    }) %>
+<%- include('partials/footer') %>
